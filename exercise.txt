@@ -9,3 +9,22 @@ create a list & store 10 different type of values in it
     print list twice using * 
     print item in the list from 2nd to 5th position
 
+tuple
+---------------------------------
+create tuple to store all states name of india 
+display tuple 
+display 1st five items 
+display 2nd and 3rd and 4th item 
+display all items from 7th position onwards 
+try to remove 3rd item see what happens 
+
+
+dictionary
+----------------------------
+create dictionary to store 20 different detail about your ownself 
+print dictionary
+print name, age, gender, dob 
+add key value pair pincode into dictionary 
+add key value pair to store your 5 favourite touriest destination 
+print all the favourite touriest destination 
+
