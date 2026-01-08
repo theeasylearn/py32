@@ -28,3 +28,10 @@ add key value pair pincode into dictionary
 add key value pair to store your 5 favourite touriest destination 
 print all the favourite touriest destination 
 
+exercise
+-------------------
+#write a program to convert given 3 digit amount into words
+# input : 175 output : one seven five 
+
+#write a program to convert given 3 digit amount into words
+# input : 175 output : one hundred seventy five  
