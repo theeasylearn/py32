@@ -35,3 +35,25 @@ exercise
 
 #write a program to convert given 3 digit amount into words
 # input : 175 output : one hundred seventy five  
+
+#write a program to convert given minutes into hours and remaining minutes
+input : 150 minutes 
+output : 2 hours and 30 minutes 
+
+#write a program to convert given grams into kg and remaining grams
+input : 2500 grams
+output : 2 kg and 500 grams 
+
+#write a program to display dinominations of currency for given amount
+input : 887 Rupees 
+output : 
+500 x 1 = 500
+200 x 1 = 200
+100 x 1 = 100
+50 x 1 =  50
+20 x 1 =  20
+10 x 1 =  10
+5 x 1 =   05
+2 x 1 =   02
+1 x 1 =   01
+
