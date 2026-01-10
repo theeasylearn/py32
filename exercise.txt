@@ -57,3 +57,48 @@ output :
 2 x 1 =   02
 1 x 1 =   01
 
+exercise set - 2
+-------------------------------------------------
+Here are the same programs, **cleanly numbered in a single list**, ready to use in assignments or question papers:
+
+1. Create a list of 10 numbers and find the sum using built-in functions.
+2. Given a list of numbers, find the maximum and minimum values.
+3. Create a tuple of 5 elements and find its length.
+4. Reverse a list using slicing (no loop).
+5. Count how many times a specific value appears in a list using built-in methods.
+6. Convert a list with duplicate values into a set and display unique elements.
+7. Create two sets and find their union.
+8. Create two sets and find their intersection.
+9. Create two sets and find their difference.
+10. Given a list of numbers, sort it in ascending and descending order.
+11. Create a dictionary of 5 students with their marks and find the total marks.
+12. From a dictionary, extract only the keys into a list.
+13. From a dictionary, extract only the values into a list.
+14. Merge two dictionaries into a single dictionary.
+15. Create a list of numbers and remove all duplicate values without using loops.
+16. Given a tuple of numbers, convert it into a list and add new elements.
+17. Create a list and find the second largest number using sorting.
+18. Given a list of words, create a set to find unique words.
+19. Create a dictionary and calculate the average of all values.
+20. Given two lists, convert them into sets and find common elements.
+21. Write a program to convert bytes into kilobytes.
+22. Write a program to convert kilobytes into megabytes.
+23. Write a program to convert grams into kilograms.
+24. Write a program to convert kilograms into grams.
+25. Write a program to calculate simple interest using principal, rate, and time.
+26. Write a program to calculate total amount after simple interest.
+27. Write a program to calculate the area of a triangle using base and height.
+28. Write a program to calculate the area of a rectangle using length and breadth.
+29. Write a program to calculate the perimeter of a rectangle.
+30. Write a program to calculate the area of a circle using radius.
+31. Write a program to convert Celsius temperature into Fahrenheit.
+32. Write a program to convert Fahrenheit temperature into Celsius.
+33. Write a program to calculate the average of marks.
+34. Write a program to convert seconds into minutes.
+35. Write a program to convert minutes into hours.
+36. Write a program to calculate the total price of items.
+37. Write a program to calculate discount amount using price and discount rate.
+38. Write a program to calculate the square and cube of a number.
+39. Write a program to calculate speed using distance and time.
+40. Write a program to convert meters into kilometers.
+
