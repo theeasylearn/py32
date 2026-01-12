@@ -102,3 +102,9 @@ Here are the same programs, **cleanly numbered in a single list**, ready to use 
 39. Write a program to calculate speed using distance and time.
 40. Write a program to convert meters into kilometers.
 
+Operators
+------------------------------------------------------------------
+1) write a program to findout name of place existing in tuple or not using in operator
+2) write a program to findout whether number exist in list or not using in operator
+3) write a program to findout whether particular key/value exist in dictionary or not using in operator 
+4) write a program to findout name of crickerter in string which has 20 player name using in operator.
