@@ -1,4 +1,4 @@
-#write a program to findout profit or loss amount from user given purchase and sell price of project
+#write a program to find out profit or loss amount from user given purchase and sell price of project
 #input purchase & sell price
 purchase_price = float(input("Enter purchase price"))
 sale_price = float(input("Enter sale price"))
