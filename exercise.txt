@@ -143,7 +143,7 @@ if else
 
 if else if decision making 
 1) 
-Write a program that takes a 5 subject marks from user. calculate total and average  and prints the grade using the following conditions:
+Write a program that takes a 5 subject marks from user. calculate total and Percentage  and prints the grade using the following conditions:
 
 | Percentage | Grade |
 | ---------- | ----- |
@@ -155,15 +155,14 @@ Write a program that takes a 5 subject marks from user. calculate total and aver
 | below 50   | Need to improve  |
 ----------------------------------------
 
-3) write a program to accept 2 number from user. and accept choice for operations.
+2) write a program to accept 2 number from user. and accept choice for operations.
 operations will be addition, subtraction, multiplication, division
-do operation and display result as per user choice using switch statements.
+do operation and display result as per user choice about operation using if elif else statements.
 
-2) write a program to accept month number from user and display how many days month has. (use logical operator or)
+3) write a program to accept month number from user and display how many days month has. (use logical operator or)
     input : 1 output : this month has 31 days 
     input : 4 output : this month has 30 days 
 
-3) write a program to findout whether given year is millenium year or not 
 
 4) write a program to accept birth day and birth month from user as separate input. decide zodiac sign from below table 
     Aries: March 21–April 19
