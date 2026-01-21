@@ -1,0 +1,5 @@
+
+1) learn what is prime number 
+2) learn what is composite number 
+3) learn what is perfect number 
+4) learn what is armstrong number 
