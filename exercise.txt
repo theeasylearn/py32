@@ -190,3 +190,7 @@ loop
 2)   1    8   27   125  ....... 1000
 3)   1    -8   27  -64  .....    1000
 4)   0    1   1   2   3   5   8   13  .... 100
+
+5) write a program to figure out whether given number  is composite number or not
+6) write a program to figure out whether given number  is perfect number or not
+7) write a program to figure out whether given number  is armstrong number or not
