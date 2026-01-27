@@ -194,3 +194,14 @@ loop
 5) write a program to figure out whether given number  is composite number or not
 6) write a program to figure out whether given number  is perfect number or not
 7) write a program to figure out whether given number  is armstrong number or not
+
+for loop 
+------------------------
+1) write a program to count odd and even number in numeric list 
+2) write a program to generate and display sum of all the float values in tuple and also calculate average 
+3) write a program to count words in given string 
+4) write a program to count digits in given string 
+5) write a program to count vowels, consonants, digits, words, and symbol in given list 
+6) write a program to convert all negative values into positive values in the same list 
+7) write a program to findout coutries whose area is greater given area. use chatgpt to create dictionaries which country name as key and its' area as value. 
+
