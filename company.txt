@@ -11,4 +11,8 @@ Internship Start Date
 Internship Start Date
     01-03-2026
 
+Nature of the Industry 
+Consultancy
 
+Assigned Tasks 
+develop python console application 

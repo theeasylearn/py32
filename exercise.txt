@@ -205,3 +205,28 @@ for loop
 6) write a program to convert all negative values into positive values in the same list 
 7) write a program to findout coutries whose area is greater given area. use chatgpt to create dictionaries which country name as key and its' area as value. 
 
+nested loop 
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+
+1
+0 1
+0 1 0
+1 0 1 0
+1 0 1 0 1
+
+1 2 3 4 5  
+1 2 3 4  
+1 2 3  
+1 2  
+1
+
+5 4 3 2 1
+5 4 3 2
+5 4 3
+5 4
+5
+
