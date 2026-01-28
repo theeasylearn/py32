@@ -181,8 +181,40 @@ do operation and display result as per user choice about operation using if elif
 5) write a program to findout day of week(monday/tuesday/wednesday) from given date.  
     https://www.wikihow.com/Calculate-the-Day-of-the-Week
 
-6)write a program display marriage compatibility for male female using birth dates as per below link,  accept birth day and birth month from user as separate input for both male & female. decide zodiac sign as per previous example and then use zodiac sign to decide  marriage compatibility
+6) Create a program that checks how compatible two people are for marriage based on their zodiac signs.
+
+Ask for the male's birth day (example: 15)
+Ask for the male's birth month (example: 3 for March)
+Ask for the female's birth day (example: 22)
+Ask for the female's birth month (example: 7 for July)
+
+
+Find their zodiac signs:
+Use the birth day and month to determine each person's zodiac sign
+For example: If born on March 15, the zodiac sign is Pisces
+Use the same zodiac date ranges as in the previous zodiac exercise
+
+Check compatibility:
+Use a compatibility chart (like the one in the provided link) to find out how well their zodiac signs match
+The chart shows compatibility ratings between all zodiac sign pairs
 https://miro.medium.com/v2/resize:fit:1100/format:webp/1*f58HMTVzfN2XvCPR23wXgA.jpeg
+
+Display the result:
+Show the male's zodiac sign
+Show the female's zodiac sign
+Display their compatibility level (like: Excellent, Good, Average, or Poor)
+Optionally, show a percentage or description of how compatible they are
+Example output:
+Male's Zodiac Sign: Pisces
+Female's Zodiac Sign: Cancer
+Compatibility: Excellent (95%)
+These signs are highly compatible for marriage!
+
+nested decision making statements
+---------------------------------------
+1) write a program to findout heaviest person from 3 person given weight
+2) write a program to findout most young person from 4 person given age
+
 
 loop 
 ---------------------
