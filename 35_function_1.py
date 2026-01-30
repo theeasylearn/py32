@@ -1,6 +1,7 @@
 # concept of user defined function
 #syntax 
 #def function-name(parameters):
+# 4	With return value with argument 
 #example 
 def getSquare(number):
     square = number * number
@@ -10,7 +11,7 @@ def getSquare(number):
 
 def getQube(num):
     qube = getSquare(num) * num 
-    return qube 
+    return qube
 
 n1 = int(input("Enter number"))
 #calling function

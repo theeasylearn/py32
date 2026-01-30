@@ -272,9 +272,8 @@ nested loop
   * * *
  * * * *
 * * * * *
+
 function 
 -----------------------------
 write a program to create function that convert given fahrenheit into celsius 
-
-write a program to create function that calculate and return simple interest of given amount rate and year 
-
+write a program to create function that calculate and return simple interest of given amount rate and year
