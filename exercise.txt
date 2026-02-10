@@ -277,3 +277,17 @@ function
 -----------------------------
 write a program to create function that convert given fahrenheit into celsius 
 write a program to create function that calculate and return simple interest of given amount rate and year
+
+project - 1
+-----------------------
+modify example 41_play_rashi_kathan.py to add below functionality 
+    1) decide chandra rashi of user 
+    2) use rashi to decide page url 
+    3) decide url for particular rashi 
+    4) fetch data from url 
+    5) extract data 
+    6) use tts 
+    7) play sound   
+    8) play rashi bhvishya once per day after 5 minutes of laptop started 
+
+    
