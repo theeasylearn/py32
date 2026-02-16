@@ -290,4 +290,19 @@ modify example 41_play_rashi_kathan.py to add below functionality
     7) play sound   
     8) play rashi bhvishya once per day after 5 minutes of laptop started 
 
-    
+recursion
+1) write a program to figure out octal of given decimal number 
+2) write a program to figure out hexadcimal of given decimal number 
+3) write a program to figure out factorial of given number 
+
+lambda function 
+write a program to calculate compound interest using lambda function 
+write a program to calculate fahrenheit of given celsius using lambda function 
+
+write a program to convert list that has mixed case countries names into lowercase countries name using lambda
+write a program to convert list that has mixed case countries names into uppercase countries name  using lambda
+
+write a program to filter word list that ends with asia using filter function 
+write a program to filter word list that ends with tan using filter function 
+write a program to filter largest number among each value in 2n list using filter function 
+
