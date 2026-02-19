@@ -15,6 +15,5 @@ cards = ["A♠", "2♠", "3♠", "4♠", "5♠", "6♠", "7♠", "8♠", "9♠",
 print(cards)
 print(random.sample(cards,k=len(cards)))
 random.shuffle(cards)
-
 print(cards)
 print(random.choices(cards,k=3))
