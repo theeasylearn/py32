@@ -330,3 +330,5 @@ create module communicator which has below methods
     use can send sms/msg/email only when he has sufficient credit (global variable) 
         deduct credit variable as per value given above 
     initial credit value will be 10
+
+convert example no 54 and 55 into module named pas MyGenerator which convert the code into methods in both example, give option to generate OTP and password of required size 
