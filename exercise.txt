@@ -332,3 +332,7 @@ create module communicator which has below methods
     initial credit value will be 10
 
 convert example no 54 and 55 into module named pas MyGenerator which convert the code into methods in both example, give option to generate OTP and password of required size 
+
+exception handling 
+
+1) modify example 56, in case of 5 unsuccessful attempt program should stop 
