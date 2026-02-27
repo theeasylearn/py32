@@ -336,3 +336,5 @@ convert example no 54 and 55 into module named pas MyGenerator which convert the
 exception handling 
 
 1) modify example 56, in case of 5 unsuccessful attempt program should stop 
+
+2) create program to calculate EMI for given loan amount, tenure and rate use exception handling to handle invalid input and use raise to handle negative values 
