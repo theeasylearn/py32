@@ -1,0 +1,14 @@
+create table category
+--------------------------
+create table category (
+    id int primary key auto_increment,
+    name varchar(32) unique not null, 
+    photo varchar(255) default 'photo.jpg', 
+    detail text, 
+    islive boolean default true,
+    create_at datetime default current_timestamp 
+)
+
+how to drop table?
+drop table category
+
