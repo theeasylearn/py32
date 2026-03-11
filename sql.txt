@@ -11,4 +11,15 @@ create table category (
 
 how to drop table?
 drop table category
+---------------------------------------------------------------------------------------
+how to insert new rows into table?
+there are two different approach to insert rows into table. 
 
+1st approach syntax 
+----------------------------------
+insert into <tablename> values (value-1,value-2,value-3,value-4,value-5,value-6,[value-n])
+
+example 
+insert into products values (0,'PNCL001','Apsara Dark penceil','really dark pencil','Stationary','apsara',100,90,1000,100.0,1,'2025-11-01',CURRENT_TIMESTAMP)
+
+insert into products values (0,'SCAL002','Stainless steal scale','good quality scale','Stationary','natraj',200,170,100,150.0,1,'2024-08-12',CURRENT_TIMESTAMP)
