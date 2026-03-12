@@ -23,3 +23,53 @@ example
 insert into products values (0,'PNCL001','Apsara Dark penceil','really dark pencil','Stationary','apsara',100,90,1000,100.0,1,'2025-11-01',CURRENT_TIMESTAMP)
 
 insert into products values (0,'SCAL002','Stainless steal scale','good quality scale','Stationary','natraj',200,170,100,150.0,1,'2024-08-12',CURRENT_TIMESTAMP)
+
+2nd approach syntax 
+----------------------------------
+insert into <tablename> (field-1,field-2) values (value-1,value-2)
+
+example 
+insert into products (product_code,name,description,category,price,stock,is_active) values ('WTR007','Cello water bag','1 Ltr unbreakable cello waterbag','Stationary',500,50,1)
+
+
+How to Delete rows?
+syntax 
+    delete from <tablename> [where <condition>]
+
+to delete all product rows 
+    delete from products 
+
+delete specific rows 
+    delete product whose id is 5
+    delete from products where id = 5
+
+    delete product whose product code is PNCL003
+    delete from products where product_code = 'PNCL003'
+
+    delete product whose stock is greater then or equal to 900
+    delete from products where stock >=900
+
+
+how to update existing row?
+syntax 
+    update <tablename> set field-1=value-1, field-2=value-2, field-n=value-n [where <condtion>]
+
+    update all rows 
+    update all product increase price of each product by 10 percentage 
+    update products set price = price * 1.10
+
+
+    update specific rows 
+    update product table decrease price by 20 percentage of those product whose price is below 60 rs 
+
+    update products set price = price * 0.80 where price<60
+
+    update product set price to 50 rupees, name to Whitener, description to paper whitener of those product whose id is 11
+
+    update products set price=50,name='Whitener',description='paper whitener' where id = 11
+
+
+how to empty table and reset primary key?
+    syntax
+    truncate table <tablename>
+    truncate table products 
