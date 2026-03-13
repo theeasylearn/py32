@@ -73,3 +73,352 @@ how to empty table and reset primary key?
     syntax
     truncate table <tablename>
     truncate table products 
+
+how to drop table?
+syntax 
+drop table tablename 
+example 
+drop table products
+
+
+how to fetch data from table?
+ to fetch data from one or more table, we use select sql statement 
+ syntax 
+   SELECT * | column_list FROM table_name [WHERE condition] [GROUP BY column_name] [HAVING condition] [ORDER BY column_name ASC|DESC] [LIMIT number, offset];
+
+------------------------------
+
+1     Select all fields and all rows from customers table.
+SQL : select * from customers
+
+2 Select customerNumber, customerName, city, state, country of all customers from customers table.
+SQL : select customerNumber, customerName, city, state, country from customers c
+
+3 Select first 50 customers' name, city, state and country from customers
+SQL : select customerName,city,state,country from customers c limit 0,50
+
+4 Select next 50 customers' name, city, state and country from customers
+SQL : select customerName,city,state,country from customers c limit 50,50
+
+5 Select next 100 customers' name, city, state and country from customers
+SQL : select customerName,city,state,country from customers c limit 100,100
+
+How to display data in specific order (ascending / descending order)
+    we should always display records in specific order rather default order(insertion order)
+
+6 Select customerNumber, customerName, city, state, country of all customers from customers table in name wise ascending order
+SQL :  select customerNumber, customerName, city, state, country from customers order by customerName limit 0,200
+
+7 Select customerNumber, customerName, city, state, country of all customers from customers table display them country wise, then state wise and then city wise in ascending order
+SQL : select customerNumber, customerName, city, state, country from customers order by country, state, city limit 0,200
+
+8 Select customerNumber, customerName, city, state, country, creditLimit of all customers from customers table and display it creditLimit wise in descending order
+SQL : select customerNumber, customerName, city, state, country,creditLimit from customers order by creditLimit desc  limit 0,200
+
+8.2 fetch Namewise 1st 50 customers customerNumber,customerName
+SQL :
+
+Filter data (fetch data as per conditions)
+
+9 Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA
+SQL :
+
+10 Select customerNumber, customerName, city, state, country, creditLimit of those customers whose creditLimit is below 500000, display them creditLimit wise ascending order
+SQL :
+
+11 Select customerNumber, customerName, country of those customers whose country is USA or France
+SQL :
+
+12 Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA or France or Australia or Japan or Italy
+SQL :
+
+in operator should be used only when we need to check many different condition on same field using only = operator
+
+13 Select customerNumber, customerName, creditLimit of those customers whose creditLimit is between 100000 to 999999
+SQL :
+
+14 Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is San Francisco
+SQL :
+
+15 Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is Delhi
+SQL :
+
+16 Select unique country from customers table and display it in ascending order
+SQL :
+
+17 Select customerNumber, customerName, city, state, country, creditLimit of those customers who are not from USA, France, Australia, Japan & Italy and display them in ascending order of country name
+SQL :
+
+18 Select customerNumber, customerName from customers table of those customers whose name has wheels at any position (start, middle, last)
+SQL :
+
+19 Select customerNumber, customerName from customers table of those customers whose name has contains wheels at end
+SQL :
+
+20 Select customerNumber, customerName from customers table of those customers whose name has contains wheels at end
+SQL :
+
+21 select payments details (all fields) from payments table of those payments received on 17 dec 2004
+SQL :
+
+22 select payments details (all fields) from payments table of those payments in received dec 2004
+SQL :
+
+23 select payments details (all fields) from payments table of those payments received in 2004
+SQL :
+
+24 select customerNumber,paymentDate and amount from payment table display paymentDate in indian format including day name of week
+
+SQL :
+
+Common Format Codes
+
+| Code | Meaning          | Example |
+| ---- | ---------------- | ------- |
+| %d   | Day (2 digits)   | 05      |
+| %m   | Month (2 digits) | 03      |
+| %Y   | Year (4 digits)  | 2026    |
+| %y   | Year (2 digits)  | 26      |
+| %M   | Full month name  | March   |
+| %b   | Short month name | Mar     |
+| %W   | full week name   | Monday  |
+
+## Aggregate function
+
+Function that works upon numeric field and returns single value is called Aggregate function.
+
+sum(field)
+sum function returns sum of given numeric field.
+
+avg(field)
+avg function returns average of given numeric field.
+
+min(field)
+min function return minimum value of given numeric field
+
+max(field)
+max function return maximum value of given numeric field
+
+count()
+count function count of rows in table (how many rows table has)
+
+18 Fetch total payment amount from payments
+SQL :
+
+19 Fetch minimum and maximum amount from payments
+SQL :
+
+20 Fetch average payment amount from payments
+SQL :
+
+21 Count number of customers
+SQL :
+
+22 Fetch count of customers who are from USA
+SQL :
+
+23 Fetch total payment amount of customers whose customerNumber is 112
+SQL :
+
+24 Fetch total payment amount received in year 2004
+SQL :
+
+or
+
+25 Fetch average payment amount of customer whose customerNumber is 114
+SQL :
+
+---
+
+Group By
+
+Group by clause is used to calculate result for Aggregate function based upon repetitive value of specific field.
+
+26 Fetch total payments amount paid by each and every customer
+SQL :
+
+27 Fetch number of payments received by each and every customer
+SQL :
+
+28 Fetch maximum payment amount received by each and every customer
+SQL :
+
+29 Fetch number of customers from each country
+SQL :
+
+30 Fetch number of orders given by each and every customers and display them in descending order
+SQL :
+
+31 Fetch number of employees in each office
+SQL :
+
+32 Fetch top 5 customer's no number order wise
+SQL :
+
+Having clause
+
+Having clause is used only when we need to give condition on value returned by group by clause.
+
+32 Fetch customer wise total payment amount of those customers whose total payment amount is above 1 lakh & display it total payment wise descending order
+
+SQL :
+
+33 Fetch customer wise number of payments made of those customers who have made more than 3 payments & display it in number of payments wise descending order
+SQL :
+
+34 Fetch country name and number of customers from each country where there are more than 5 customers
+SQL :
+
+## Joins
+
+Join operation basically makes join between any numbers of tables and display data as single virtual table.
+to join multiple tables, there must be one common field between tables to be used in join.
+
+what is common field?
+common field is field in two table which has same data type and same set of values (domain values)
+
+types of
+
+INNER JOIN / Equi join
+Inner join fetches only matching rows from all the tables using in join. here matching rows means common field in both table has same value in both table
+
+LEFT JOIN
+Left join fetches all rows from left side table but only matching rows from right side table. here matching rows means common field in both table has same value in both table
+
+RIGHT JOIN
+right join fetches all rows from right side table but only matching rows from left side table. here matching rows means common field in both table has same value in both table
+
+CROSS JOIN
+FETCH DATA FROM BOTH TABLE WITHOUT ANY CONDITION
+
+SELF JOIN
+
+35 Fetch customerNumber, customerName, city, state, country and orderNumber, orderDate, status of order, display it customerNumber wise ascending order
+
+SQL :
+
+1.
+2.
+
+let us join
+
+3.
+
+36 Fetch customerNumber, customerName, city, state, country and paymentDate, amount of each and every customer and display them payment date wise (old date come first and new date come last)
+
+SQL :
+
+1.
+2.
+
+let us join
+
+3.
+
+37 Fetch productCode, productName, quantityOrdered, priceEach, orderNumber, orderDate, status of each and every order
+
+SQL :
+
+1.
+2.
+3.
+
+let us join
+
+1.
+
+2. fetch each order's orderNumber,customerNumber and total order value
+
+SQL
+
+1.
+2.
+
+let us join
+
+3.
+
+## LEFT JOIN
+
+Left join fetches all rows from left side table but only matching rows from right side table. here matching rows means common field in both table has same value in both table
+
+39. fetch customerNumber,customerName who have never given any order
+
+SQL :
+
+1.
+2.
+
+let us join
+
+40. Fetch those productCode and ProductName of those product which is never ordered
+
+SQL :
+
+1.
+2.
+
+let us join
+
+---
+
+RIGHT JOIN
+
+right join fetches all rows from right side table but only matching rows from left side table. here matching rows means common field in both table has same value in both table
+
+41. fetch those customerNumber and customerName who have never given any payments
+
+SQL
+
+1.
+2.
+
+let us join them
+
+42. fetch those office Detail from office table in which no employees are working
+
+SQL)
+
+1.
+2.
+
+let us join
+
+CROSS JOIN
+FETCH DATA FROM BOTH TABLE WITHOUT ANY CONDITION
+
+## fetch possibilities where each and every employees can work in each office
+
+SQL)
+
+1.
+2.
+
+let us join
+
+## some advance examples
+
+43. findout actual customer's number and name who have not given payments
+
+SQL
+
+1. findout customers who have have given orders
+
+2. findout customerNumber and customerName from customers
+
+3. findout customerNumber who have made at least one payments
+
+let us join them
+fetch customers details who has given orders
+
+now display only those customers who have not made payments
+
+fetch customerNumber,customerName, pending amount
+
+1. fetch orderNumber and order amount
+
+2. fetch customerNumber,customerName, orderNumber
+
+let us join above detail
+
+let us remove those customers who have given payment
