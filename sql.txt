@@ -115,61 +115,63 @@ SQL : select customerNumber, customerName, city, state, country from customers o
 8 Select customerNumber, customerName, city, state, country, creditLimit of all customers from customers table and display it creditLimit wise in descending order
 SQL : select customerNumber, customerName, city, state, country,creditLimit from customers order by creditLimit desc  limit 0,200
 
-8.2 fetch Namewise 1st 50 customers customerNumber,customerName
-SQL :
+8.2 fetch Namewise 1st 50 customer's customerNumber,customerName
+SQL : select customerNumber,customerName from customers order by customerName limit 0,50
 
-Filter data (fetch data as per conditions)
+How to Filter data (fetch data as per conditions)
 
 9 Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA
-SQL :
+SQL : select customerNumber,customerName, city, state, country, creditLimit from customers c where country='usa'
 
-10 Select customerNumber, customerName, city, state, country, creditLimit of those customers whose creditLimit is below 500000, display them creditLimit wise ascending order
-SQL :
+10 select customerNumber, customerName, city, state, country, creditLimit of those customers whose creditLimit is below 500000, display them creditLimit wise ascending order
+SQL : select customerNumber, customerName, city, state, country, creditLimit from customers where creditLimit<500000 order by creditLimit 
 
 11 Select customerNumber, customerName, country of those customers whose country is USA or France
-SQL :
+SQL : select customerNumber,customerName,country from customers where country='usa' or country='france'
 
-12 Select customerNumber, customerName, city, state, country, creditLimit of those customers whose country is USA or France or Australia or Japan or Italy
-SQL :
+12 Select customerNumber, customerName, country of those customers whose country is USA or France or Australia or Japan or Italy
+SQL : select customerNumber,customerName,country from customers where country in ('usa','france','australia','japan','Italy')
 
-in operator should be used only when we need to check many different condition on same field using only = operator
+we can use in operator only when there multiple conditions on same field joined using or operator and = 
 
-13 Select customerNumber, customerName, creditLimit of those customers whose creditLimit is between 100000 to 999999
-SQL :
+13 Select customerNumber, customerName, creditLimit of those customers whose creditLimit is between 100000 to 999999, display them in descending order of creditLimit
+SQL : Select customerNumber, customerName, creditLimit from customers where creditLimit>100000 and creditLimit<999999 order by creditLimit desc 
 
-14 Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is San Francisco
-SQL :
+14 Select customerNumber, customerName, city, state, country  from customers where country is USA and state is CA and city is San Francisco
+SQL : Select customerNumber, customerName, city, state, country from customer where country='usa' and state = 'ca' and city='San Francisco'
 
 15 Select customerNumber, customerName, city, state, country, creditLimit from customers where country is USA and state is CA and city is Delhi
-SQL :
+SQL : Select customerNumber, customerName, city, state, country from customers where country='usa' and state = 'ca' and city='Delhi';
 
-16 Select unique country from customers table and display it in ascending order
-SQL :
+16 Select only unique country from customers table and display it in ascending order
+SQL : select distinct country from customers order by country 
 
-17 Select customerNumber, customerName, city, state, country, creditLimit of those customers who are not from USA, France, Australia, Japan & Italy and display them in ascending order of country name
-SQL :
+17 Select customerNumber, customerName, country of those customers who are not from USA, France, Australia, Japan & Italy and display them in ascending order of country name
+SQL :   select customerNumber,customerName,country from customers where country not in ('usa','france','australia','japan','Italy') order by country 
 
 18 Select customerNumber, customerName from customers table of those customers whose name has wheels at any position (start, middle, last)
-SQL :
+SQL : select customerNumber,customerName from customers where customerName like '%wheels%'
 
 19 Select customerNumber, customerName from customers table of those customers whose name has contains wheels at end
-SQL :
+SQL : select customerNumber,customerName from customers where customerName like '%wheels'
 
-20 Select customerNumber, customerName from customers table of those customers whose name has contains wheels at end
-SQL :
+20 Select customerNumber, customerName from customers table of those customers whose name has contains wheels at start 
+
+SQL : select customerNumber,customerName from customers where customerName like 'wheels%'
 
 21 select payments details (all fields) from payments table of those payments received on 17 dec 2004
-SQL :
+SQL : select * from payments where paymentDate='2004-12-17'
 
 22 select payments details (all fields) from payments table of those payments in received dec 2004
-SQL :
+SQL : select * from payments where paymentDate>='2004-12-01' and paymentDate<='2004-12-31'
 
 23 select payments details (all fields) from payments table of those payments received in 2004
-SQL :
+SQL : select * from payments where paymentDate>='2004-01-01' and paymentDate<='2004-12-31'
 
+select * from payments where year(paymentDate) = 2004
 24 select customerNumber,paymentDate and amount from payment table display paymentDate in indian format including day name of week
 
-SQL :
+SQL : select customerNumber,date_format(paymentDate,'%w %d-%m-%Y') from payments 
 
 Common Format Codes
 
