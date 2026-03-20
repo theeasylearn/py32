@@ -240,26 +240,29 @@ Group By
 
 Group by clause is used to calculate result for Aggregate function based upon repetitive value of specific field.
 
-26 Fetch total payments amount paid by each and every customer
-SQL :
+26   Fetch total payments amount paid by each and every customer
+SQL : select customerNumber,sum(amount) as total from payments group by customerNumber
 
-27 Fetch number of payments received by each and every customer
-SQL :
-
+27 Fetch number of payments(count) received by each and every customer
+SQL : select customerNumber,count(*) as count from payments group by customerNumber
+ 
 28 Fetch maximum payment amount received by each and every customer
-SQL :
+SQL : select customerNumber,max(amount) max_payment from payments group by customerNumber
 
-29 Fetch number of customers from each country
-SQL :
+29 Fetch number of customers from each country and display them in descending order 
+SQL : select country,count(*) from customers group by country order by count(*) desc 
 
 30 Fetch number of orders given by each and every customers and display them in descending order
-SQL :
+SQL : select customerNumber,count(*) from orders group by customerNumber order by count(*) desc
 
 31 Fetch number of employees in each office
-SQL :
+SQL : select officecode,count(*) from employees group by officecode
 
 32 Fetch top 5 customer's no number order wise
-SQL :
+SQL : select customerNumber,count(*) from orders group by customerNumber order by count(*) desc limit 0,5
+
+32.2 Fetch customerNumber wise top 5 payments 
+SQL : select customerNumber, sum(amount) from payments group by customerNumber order by sum(amount) desc limit 0,5;
 
 Having clause
 
@@ -267,16 +270,17 @@ Having clause is used only when we need to give condition on value returned by g
 
 32 Fetch customer wise total payment amount of those customers whose total payment amount is above 1 lakh & display it total payment wise descending order
 
-SQL :
+SQL : select customerNumber,sum(amount) from payments group by customerNumber having sum(amount)>100000 order by sum(amount) desc 
 
-33 Fetch customer wise number of payments made of those customers who have made more than 3 payments & display it in number of payments wise descending order
-SQL :
+33 Fetch customer wise number of payments made of those customers who have made more than 3 payments & display it in number of payments wise descending  order 
+SQL : select customerNumber,count(*) from payments group by customerNumber having count(*)>3 order by count(*) desc
 
 34 Fetch country name and number of customers from each country where there are more than 5 customers
-SQL :
+SQL : select country, count(*) from customers group by country having count(*)>5
 
-## Joins
 
+Joins
+-----------------------------------------------------------------------------------------
 Join operation basically makes join between any numbers of tables and display data as single virtual table.
 to join multiple tables, there must be one common field between tables to be used in join.
 
