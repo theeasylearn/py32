@@ -281,13 +281,16 @@ SQL : select country, count(*) from customers group by country having count(*)>5
 
 Joins
 -----------------------------------------------------------------------------------------
-Join operation basically makes join between any numbers of tables and display data as single virtual table.
+Join operation basically create temporary join between any numbers of tables and display data as single virtual table.
+
+how to do join operation
+
 to join multiple tables, there must be one common field between tables to be used in join.
 
 what is common field?
 common field is field in two table which has same data type and same set of values (domain values)
 
-types of
+types of joins
 
 INNER JOIN / Equi join
 Inner join fetches only matching rows from all the tables using in join. here matching rows means common field in both table has same value in both table
@@ -302,28 +305,33 @@ CROSS JOIN
 FETCH DATA FROM BOTH TABLE WITHOUT ANY CONDITION
 
 SELF JOIN
+-----------------------
 
-35 Fetch customerNumber, customerName, city, state, country and orderNumber, orderDate, status of order, display it customerNumber wise ascending order
+35 Fetch customerNumber, customerName, city, state, country and orderNumber, orderDate, status of order, display it customerNumber wise in ascending order
 
-SQL :
+SQL : 
 
-1.
-2.
+1. select customerNumber, customerName, city, state, country from customers c 
+2. select orderNumber,orderDate,status from orders o 
 
-let us join
+let us join operation 
+    first give each and every field name in both sql statement given above after select 
+    then give both table name  & their alias after from statement 
+    apply condition on common field of both table using where clause, if field names are same make sure to use alias name along with common field name 
+    make sure common field with same name in select statement also has alias 
 
-3.
+3.  select c.customerNumber, customerName, city, state, country, orderNumber,orderDate,status from customers c, orders o where c.customerNumber = o.customerNumber order by c.customerNumber
 
 36 Fetch customerNumber, customerName, city, state, country and paymentDate, amount of each and every customer and display them payment date wise (old date come first and new date come last)
 
 SQL :
 
-1.
-2.
+1. select customerNumber, customerName, city, state, country from customers c 
+2. select paymentDate,amount from payments p order by paymentDate
 
 let us join
 
-3.
+3. select c.customerNumber, customerName, city, state, country, paymentDate, amount from customers c, payments p where c.customerNumber = p.customerNumber 
 
 37 Fetch productCode, productName, quantityOrdered, priceEach, orderNumber, orderDate, status of each and every order
 
