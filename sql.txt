@@ -358,27 +358,29 @@ let us join
 
 ## LEFT JOIN
 
-Left join fetches all rows from left side table but only matching rows from right side table. here matching rows means common field in both table has same value in both table
+Left join fetches all rows from left side table but only matching rows from right side table. here matching rows means common field in both table has same value.
 
 39. fetch customerNumber,customerName who have never given any order
 
-SQL :
+SQL : 
 
-1.
-2.
+1. select customerNumber,customerName from customers c 
+2. select orderNumber from orders o 
 
 let us join
+
+3) select c.customerNumber,customerName,orderNumber from customers c left join orders o on c.customerNumber = o.customerNumber where orderNumber is NULL; 
 
 40. Fetch those productCode and ProductName of those product which is never ordered
+ 
+SQL : 
 
-SQL :
-
-1.
-2.
+1.  SELECT productCode,productName from products p 
+2.  select orderNumber from orderdetails od 
 
 let us join
-
 ---
+ SELECT p.productCode,productName,orderNumber from products p left join orderdetails od on p.productCode = od.productCode where orderNumber is NULL
 
 RIGHT JOIN
 
@@ -388,19 +390,23 @@ right join fetches all rows from right side table but only matching rows from le
 
 SQL
 
-1.
-2.
+1. select amount from payments p 
+2. select customerNumber,customerName from customers c 
 
 let us join them
+select amount, c.customerNumber,customerName from payments p right join customers c on c.customerNumber = p.customerNumber where amount is NULL
 
-42. fetch those office Detail from office table in which no employees are working
+
+42. fetch those office Detail from office table in which no employees is working
 
 SQL)
 
-1.
-2.
+1. select employeeNumber from  employees e 
+2. select * from offices o 
 
 let us join
+select employeeNumber,o.* from  employees e right join offices o on e.officecode = O.officecode where employeeNumber is NULL;
+
 
 CROSS JOIN
 FETCH DATA FROM BOTH TABLE WITHOUT ANY CONDITION

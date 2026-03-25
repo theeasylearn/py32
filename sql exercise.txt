@@ -85,3 +85,5 @@
 59. Display productCode, productName, MSRP from products and quantityOrdered, priceEach from orderdetails. Include only order details where quantityOrdered is greater than 50. Sort by quantityOrdered descending.
 
 60. Select customerName, city, state, country from customers, orderNumber, orderDate, requiredDate from orders. Show only orders that were required in the year 2003. Sort by customerName.
+
+
