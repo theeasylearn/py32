@@ -411,38 +411,33 @@ select employeeNumber,o.* from  employees e right join offices o on e.officecode
 CROSS JOIN
 FETCH DATA FROM BOTH TABLE WITHOUT ANY CONDITION
 
-## fetch possibilities where each and every employees can work in each office
+fetch possibilities where each and every employees can work in each office
 
 SQL)
 
-1.
-2.
+1. select employeeNumber, lastName, firstName, officeCode from employees e
+2. select officeCode,city,state,country from offices o
+
 
 let us join
+select employeeNumber, lastName, firstName, e.officeCode, o.officeCode,city,state,country from employees e, offices o 
 
 ## some advance examples
 
-43. findout actual customer's number and name who have not given payments
+43. findout actual customer's number and name who have given order but not given payments
 
 SQL
 
 1. findout customers who have have given orders
+select customerNumber from orders o order by customerNumber 
 
 2. findout customerNumber and customerName from customers
+select customerNumber,customerName from customers c 
 
 3. findout customerNumber who have made at least one payments
+select customerNumber from payments p order by customerNumber
+
 
 let us join them
-fetch customers details who has given orders
 
-now display only those customers who have not made payments
-
-fetch customerNumber,customerName, pending amount
-
-1. fetch orderNumber and order amount
-
-2. fetch customerNumber,customerName, orderNumber
-
-let us join above detail
-
-let us remove those customers who have given payment
+select distinct c.customerNumber,customerName from customers c,orders o where c.customerNumber = o.customerNumber and c.customerNumber not in(select customerNumber from payments p order by customerNumber)
