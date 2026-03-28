@@ -441,3 +441,51 @@ select customerNumber from payments p order by customerNumber
 let us join them
 
 select distinct c.customerNumber,customerName from customers c,orders o where c.customerNumber = o.customerNumber and c.customerNumber not in(select customerNumber from payments p order by customerNumber)
+
+
+nested query
+---------------------
+A nested query in SQL (also called a subquery) is a query written inside another query.
+It is used when the result of one query is needed to execute another query.
+
+syntax 
+SELECT column_name
+FROM table_name
+WHERE column_name OPERATOR (
+    SELECT column_name
+    FROM table_name
+    WHERE condition
+);
+
+example
+--------------------------------------------------------------
+1) fetch customerNumber,customerName,creditLimit of those customers whose creditLimit is above average creditlimit and display them creditLimit wise in descending order 
+
+SQL 
+    1) select customerNumber,customerName,creditLimit from customers c where creditLimit>55000
+    2) select avg(creditLimit) from customers ct 
+
+let us combine them 
+------------------------
+select customerNumber,customerName,creditLimit from customers c where creditLimit>(select avg(creditLimit) from customers ct ) order by creditLimit desc 
+
+2) fetch customerNumber and payment amount of those customers who have given minimum payment amount 
+
+SQL :
+   1) select customerNumber,amount from payments where amount = 1000
+   2) select min(amount) from payments 
+
+let us combine them 
+------------------------
+select customerNumber,amount from payments where amount = (select min(amount) from payments); 
+
+
+3) fetch customerNumber,orderNumber,orderDate from orders of those order which has at least 5 items in order 
+
+SQL : 
+    1) select customerNumber,orderNumber,orderDate from orders od where orderNumber()
+    2) select orderNumber from orderdetails where orderNumber = 10100
+
+let us combine them 
+------------------------
+select customerNumber,orderNumber,orderDate from orders od where 4<(select count(*) from orderdetails where orderNumber=od.orderNumber)
